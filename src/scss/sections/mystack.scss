@@ -1,0 +1,15 @@
+.mystack {
+  @include adaptiv-value("height", 505, 200);
+  @include adaptiv-value("padding-top", 225, 60);
+
+  .text {
+    max-width: 1020px;
+
+    font-weight: 700;
+    @include adaptiv-value("font-size", 40, 15);
+    @include adaptiv-value("line-height", 55, 15);
+
+    @include adaptiv-value("padding-top", 50, 15);
+  }
+
+}

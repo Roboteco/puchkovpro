@@ -1,20 +1,42 @@
-.container {
-  background-color: red;
-  @include adaptiv-value("margin-left", $layout-padding, $layout-padding-min);
-  @include adaptiv-value("margin-right", $layout-padding, $layout-padding-min);
+//.container {
+section {
+  @include adaptiv-value("padding-left", $layout-padding, $layout-padding-min);
+  @include adaptiv-value("padding-right", $layout-padding, $layout-padding-min);
   @include min-width();
 }
 
 button {
+  cursor: pointer;
   @include gilroyBold;
   font-weight: 700;
-  @include adaptiv-value("font-size", 24, 15);
+  @include adaptiv-value("font-size", 24, 13);
   text-align: center;
   border: 0 solid;
+  transition: 0.5s;
+}
+
+button:hover {
+  letter-spacing: 0.1em;
+  box-shadow: 0 0 5px $color_shadow;
 }
 
 .bg-lime {
   background-color: $color_lime;
   color: $color_middle;
+}
 
+.lime {
+  color: $color_lime;
+}
+
+.bg-dark {
+  background-color: $color_dark;
+  color: $color_white;
+}
+
+h2 {
+  @include gilroyBold;
+  font-weight: 700;
+  @include adaptiv-value("font-size", 128, 42);
+  margin-block: 0;
 }
