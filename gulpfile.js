@@ -15,6 +15,7 @@ import { server } from "./gulp/tasks/server.js"
 import { scss } from "./gulp/tasks/scss.js"
 import { js } from "./gulp/tasks/js.js"
 import { images } from "./gulp/tasks/images.js"
+import { fontscopy } from "./gulp/tasks/fonts.js"
 
 function watcher() {
   gulp.watch(path.watch.files, copy)
@@ -23,7 +24,7 @@ function watcher() {
   gulp.watch(path.watch.js, js)
   gulp.watch(path.watch.images, images)
 }
-const mainTask = gulp.parallel(copy, html, scss, js, images)
+const mainTask = gulp.parallel(copy, html, scss, js, images, fontscopy)
 
 const dev = gulp.series(reset, mainTask,  gulp.parallel(watcher, server))
 

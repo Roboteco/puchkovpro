@@ -1,6 +1,25 @@
+@import 'normalize';
+@import 'constants';
+@import 'fonts_import';
+@import 'fonts';
+@import 'functions';
+@import 'layout';
+@import 'sections/ankov.scss';
+
 body {
-  background-color: black;
-  span {
-    color: white;
-  }
+  @include gilroyBold;
+  font-weight: 700;
+  background-color: white;
+  color: $color_white;
 }
+
+main {
+  max-width: $layout-width-px;
+  min-height: 100vh;
+  background-color: $color_middle;
+  margin: 0 auto;
+  @media (max-width: #{$layout-width-min + px}) {
+    min-width: #{$layout-width-min + 2 * $layout-padding-min + px};
+  };
+}
+

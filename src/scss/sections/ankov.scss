@@ -1,0 +1,37 @@
+.ankov {
+  @include adaptiv-value("height", 750, 300);
+  @include adaptiv-value("padding-top", 160, 10);
+  position: relative;
+  overflow: hidden;
+
+  SVG {
+    @include adaptiv-value("width", 680, 105);
+    position: absolute;
+    right: 0;
+    //bottom: -20px;
+    bottom: 0;
+  }
+
+  .title {
+    @include adaptiv-value("font-size", 215, 105);
+  }
+
+  .suntitle {
+    margin-top: -10px;
+    @include adaptiv-value("font-size", 40, 20);
+  }
+
+  .service {
+    @include adaptiv-value("padding-top", 90, 35);
+    @include adaptiv-value("padding-bottom", 48, 20);
+    @include adaptiv-value("font-size", 64, 20);
+    @include adaptiv-value("line-height", 77, 25);
+    color: $color_lime;
+  }
+
+  .button {
+    @include adaptiv-value("width", 300, 150);
+    @include adaptiv-value("height", 66, 35);
+    }
+
+}

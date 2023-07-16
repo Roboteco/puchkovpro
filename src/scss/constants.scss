@@ -1,0 +1,15 @@
+// Базовые цвета макета
+$color_white: #FFFFFF;
+$color_light: #7AA7FF;
+$color_middle: #2E72FF;
+$color_dark: #0E45B3;
+$color_lime: #04FE69;
+
+// Базовые размеры макета (без px)
+$layout-width: 1920; // Максимальная ширина растяжики сайта
+$layout-width-min: 300; // Минимальная ширина сжатия сайта
+
+$layout-padding: 250; // отступ слева и справа от края макета
+$layout-padding-min: 10; // минимальный отступ на самом маленьком экране
+
+$layout-width-px: $layout-width + px;
